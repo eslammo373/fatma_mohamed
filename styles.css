@@ -1,0 +1,355 @@
+/*start variable*/
+:root{
+  
+    --main-color:#73B21A;
+    --last-color:#82F87D;
+    --second-color:#1C461A;
+    --third-color:#CB7819;
+    --fourd-color:#1D1F20;
+    --title-color: #393939;
+    --background-color:#30313e;
+    --background-color-2:#30313e;
+    --background-card:#1B1E27;
+    --background-card-2:#181818;
+    --background-icon:#393939;
+    --text-color: #444;
+    --text-color-light: #A6A6A6;
+    --white-color: #FBFEFD;
+    --container-color: #FFFFFF;
+    --light-color:#fbfefd;
+    --glass-bg-color:hsla(0,0%,100%,0.25);
+    --background-border:rgba(0,0,0,0.7);
+ 
+   }
+
+/*end variable */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+} 
+body{
+    font-family: "open sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+ul,
+li{
+    list-style:none;
+}
+.container{
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/*small screen*/
+@media (min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/*medium screen*/
+@media (min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+/*large screen*/
+@media (min-width:1100px){
+    .container{
+        width:1170px;
+        margin: 0 auto;
+    }
+}
+
+
+
+iframe{
+    
+    display: none;
+}
+.main {
+    background-image: url(5.png);
+    height: 120vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .birthday-card {
+    position: relative;
+    width: 300px;
+    height: 395px;
+    border: 10px solid #3c6382;
+    margin: 60px auto 0 auto;
+    -webkit-box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(gray), to(rgba(255, 255, 255, 0.5))), url(./fatma.jpg);
+    background-image: linear-gradient(to bottom, gray, rgba(255, 255, 255, 0.5)), url(./fatma.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  .birthday-card .text {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    font-family: 'Nobile', sans-serif;
+  }
+  
+  .birthday-card .text > p {
+    font-size: 1.1em;
+    color: #331717;
+    list-style: 1.4;
+    font-style: italic;
+    text-align: center;
+    margin: 30px auto 0 auto;
+  }
+  
+  .birthday-card .text .title {
+    font-size: 1.5em;
+    margin: 60px auto 60px auto;
+  }
+  
+  .birthday-card .cover-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0 0 -10px;
+    border: 10px solid #3c6382;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+    transform: perspective(800px) rotateY(0deg);
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    border-radius: 39px;
+  }
+  
+  .birthday-card .cover-outer img {
+    -webkit-box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+            box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .birthday-card .cover-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #3c6382;
+    background-color: #3c6382;
+    margin: -10px 0px 0 -10px;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+            transform: perspective(800px) rotateY(0deg);
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .birthday-card .cover-inner img {
+    -webkit-transform: rotateY(170deg);
+            transform: rotateY(170deg);
+            width: 100%;
+            height: 100%;
+  }
+  
+  .birthday-card:hover .cover-outer {
+    -webkit-transform: perspective(800px) rotateY(-170deg);
+            transform: perspective(800px) rotateY(-170deg);
+  }
+  
+  .birthday-card:hover .cover-inner {
+    -webkit-transform: perspective(800px) rotateY(-170deg);
+            transform: perspective(800px) rotateY(-170deg);
+    -webkit-box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .cart{
+    background:linear-gradient(120deg, #3c6382 -5.91%, #4a69bd 111.58% , #192a56 111.58%);
+  height: auto;
+  width: 100%;
+  padding: 80px 0 ;
+  margin: 0 auto;
+  position: relative;
+
+
+}
+
+
+.cart .content{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 30%;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 37px;
+    text-align: center;
+    color: white;
+    height: auto;
+    
+}
+
+
+
+.cart .images img{
+    width: 70%;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 5px solid var(--third-color);
+
+}
+.cart .content p{
+    color: var(--white-color);
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+
+
+.cart button:hover{
+    cursor: pointer;
+}
+
+.button-wrapper canvas{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%) ;
+    pointer-events: none;
+    left: 50%;
+}
+
+.cart button{
+    height: 50px;
+    width: 200px;
+    border-radius: 29px;
+    border: 0;
+    background: var(--third-color);
+    color: white;
+    text-transform: capitalize;
+    font-size: 19px;
+    line-height: 50px;
+  
+
+}
+
+@media (max-width:992px) and (min-width:768px){
+    .cart .content{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 90%;
+        margin: 0 5%;
+}
+}
+
+@media (max-width:767px) and (min-width:540px){
+    .cart .content{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 90%;
+        margin: 0 5%;
+}
+}
+
+@media only screen and (max-width:538px){
+    .cart .content{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 90%;
+        margin: 0 5%;
+}
+
+}
+
+
+audio{
+    display: none;
+}
+
+
+
+.message{
+    position: fixed;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
+    width: 300px;
+    height: 270px;
+    background-color:rgba(0,0,0,0.7);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 23px;
+    transform: scale(1);
+}
+.message.close{
+    transform: scale(0);
+}
+.message p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 30px;
+
+
+}
+
+
+.message button{
+    width: 140px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background: var(--third-color);
+    color: white;
+}
+.message button:hover{
+    cursor: pointer;
+}
+
+.close_window{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    width: 30px;
+    height: 25px;
+    background-color: var(--third-color);
+    border-radius: 7px;
+    transform: scale(1);
+
+}
+
+.close_window:hover{
+    cursor: pointer;
+}
